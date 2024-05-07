@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Register</h2>
+    <form action="#" method="post">
+        <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" id="123" name="Memmedeli" placeholder="Istifadeci adi" required>
+        </div>
+        <div class="input-container">
+            <i class="fas fa-at"></i>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-container">
+            <i class="fas fa-unlock"></i>
+            <input type="Sifre" id="Sifre" name="Sifre" placeholder="Sifre" minlength="6" required>
+            <span class="toggle-password"><i class="far fa-eye"></i></span>
+        </div>
+        <div class="CINS">
+            <label>CINS:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male"><i class="fas fa-male"></i> Kisi</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female"><i class="fas fa-female"></i> Xanim</label>
+        </div>
+        
+        <div class="input-container">
+            <i class="fas fa-map-marker-alt"></i>
+            <select id="Olke" name="Olke" required>
+                <option value="" disabled selected>Region sec </option>
+                <option value="Baki">Baki</option>
+                <option value="XACMAZ">XACMAZ</option>
+                <option value="Gence">Gence</option>
+                <option value="Zaqatala">Zaqatala</option>
+                <option value="Sumqayit">Sumqayit</option>
+            </select>
+        </div>
+        <input type="Tesdiqle" value="Tesdiqle">
+    </form>
+    <div class="Sifreni unutdun ?">
+        <a href="https://www.instagram.com/accounts/password/reset/">Sifreni unutdun ?</a>
+    </div>
+</div>
+<script>
+    const togglePassword = document.querySelector('.toggle-password');
+    const password = document.getElementById('Sifre');
+
+    togglePassword.addEventListener('click', function() {
+        const type = password.getAttribute('type') === 'Sifre' ? 'text' : 'Sifre';
+        password.setAttribute('type', type);
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+</script>
+</body>
+</html>
